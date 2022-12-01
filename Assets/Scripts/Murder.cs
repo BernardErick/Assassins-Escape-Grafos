@@ -6,11 +6,7 @@ using UnityEngine;
 public class Murder : MonoBehaviour
 {
     private int[,] graph
-<<<<<<< HEAD
-           = new int[,] {
-=======
-            = new int[,] {
->>>>>>> 7e682520b3b3c1ae560250a14605e43596f28aec
+                = new int[,] {
                             { 0,2,0,0,0,0,0,0,0,0,0 },
                             { 2,0,8,0,3,0,0,0,0,0,0 },
                             { 0,8,0,0,0,0,3,0,0,0,0 },
@@ -22,13 +18,8 @@ public class Murder : MonoBehaviour
                             { 0,0,0,0,0,6,0,4,0,1,0 },
                             { 0,0,0,0,0,6,0,0,0,1,0 },
                             { 0,0,0,0,0,0,7,0,0,4,0 }
-<<<<<<< HEAD
-                       };
+                            };
     private Vector3[] unityGraphPosition
-=======
-                        };
-    private Vector3[] unityGraphPosition 
->>>>>>> 7e682520b3b3c1ae560250a14605e43596f28aec
         = { new Vector3(-175.525f,-637.58f,-91.562f), //A
             new Vector3(-179.74f,-637.58f,-91.562f), //B
             new Vector3(-195.61f,-637.58f,-91.562f), //C
@@ -80,18 +71,13 @@ public class Murder : MonoBehaviour
         }
     }
     IEnumerator movementMurderOnebyOne(ArrayList fullpath){
-        foreach(int path in fullpath){
-            Debug.Log(path);
-        }
+
         foreach (int path in fullpath)
         {
             Debug.Log("Estou no vertice: " + path);
             pathToGo = unityGraphPosition[path];
             murderLocation = path;
-            // float peso = graph[path, path + 1];
-            //t = 0.1f - (peso / 100f);
-            //t = 0.3f;
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(10f);
         }
     }
 }
