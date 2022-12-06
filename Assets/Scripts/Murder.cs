@@ -74,6 +74,7 @@ public class Murder : MonoBehaviour
         while (!playerCaptured || murderLocation != playerLocation)
         {
             Debug.Log("Calculando nova trajetoria!");
+
             ArrayList fullpath = ShortestPath.Dijkstra(graph, murderLocation, playerLocation);
             string text = "";
             foreach (int path in fullpath)
@@ -95,7 +96,6 @@ public class Murder : MonoBehaviour
         }
     }
     IEnumerator movementMurderOnebyOne(ArrayList fullpath){
-        fullpath.RemoveAt(0);
         int origem = -1;
         int destino = -1;
         float peso = 1f;
@@ -109,25 +109,11 @@ public class Murder : MonoBehaviour
             Debug.Log("Indo ao vertice: " + destino);
             Debug.Log("Com o Peso: " + peso);
 
-            pathToGo = unityGraphPosition[origem];
-            murderLocation = origem;
-
+            pathToGo = unityGraphPosition[destino];
+            murderLocation = destino;
+            //Chegando lá, eu descanso o tanto que andei
             yield return new WaitForSeconds(1f + peso);
         }
-        if (playerLocation != murderLocation) {
-            try {
-                //Precisa ser revisada essa parte
-                pathToGo = unityGraphPosition[destino];
-                murderLocation = destino;
-            }
-            catch (Exception e) {
-                Debug.LogError("movementMurderOnebyOne setPathToGo&murderLocation error: "+e.Message);
-            }
-
-        }
-
-
-        yield return new WaitForSeconds(1f + peso);
     }
     private void OnTriggerEnter(Collider collision)
     {
