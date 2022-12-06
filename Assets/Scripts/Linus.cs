@@ -27,6 +27,13 @@ public class Linus : MonoBehaviour
     
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.P)){
+            GameController.instance.ShowPause();
+            Time.timeScale=0;
+        }
+        if(Input.GetKeyDown(KeyCode.Q)){
+            GameController.instance.ShowOffPause();
+        }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             forwardSpeed = 2f;
