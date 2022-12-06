@@ -39,7 +39,7 @@ public class Linus : MonoBehaviour
     void Update()
     {
         if(ponto <= 0){
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Menu");
         }
         // vitoria ();
         if(Input.GetKeyDown(KeyCode.P)){

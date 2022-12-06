@@ -35,22 +35,22 @@ public class Murder : MonoBehaviour
             new Vector3(-187.58f,-637.58f,-73.56f), //I
             new Vector3(-187.58f,-637.58f,-71.56f), //J
             new Vector3(-195.6f,-637.58f,-71.56f), //K
-            new Vector3(-195.56f,-638.14f,-77.62f), //L
-            new Vector3(-205.47f,-638.14f,-77.62f), //M
-            new Vector3(-205.47f,-638.14f,-85.52f), //N
+            new Vector3(-195.56f,-637.58f,-77.62f), //L
+            new Vector3(-205.47f,-637.58f,-77.62f), //M
+            new Vector3(-205.47f,-637.58f,-85.52f), //N
         };
     private string[] frasesGame = {
-            "Porque voc� est� desistindo de novo?", //A
-            "Quando vai perceber que voc� cavou a pr�pria cova?", //B
-            "N�o tem fim, e voc� sabia.", //C
-            "Sabemos o que voc� fez.", //D
+            "Porque voce esta desistindo de novo?", //A
+            "Quando vai perceber que voce cavou a propria cova?", //B
+            "Nao tem fim, e voce sabia.", //C
+            "Sabemos o que voce fez.", //D
             "Estaremos sempre lhe observando.", //E
-            "Est� satisfeito agora?", //F
-            "Voc� causou tudo isso.", //G
+            "Esta satisfeito agora?", //F
+            "Voce causou tudo isso.", //G
             "Agora resolva.", //H
-            "Ele j� sabe, nois sabemos.", //I
-            "Voc� podia ter ajudado quando podia.", //J
-            "Agora � tarde.", //K
+            "Ele ja sabe, nois sabemos.", //I
+            "Voce podia ter ajudado quando podia.", //J
+            "Agora e tarde.", //K
         };
     public int playerLocation;
     public GameObject player;
@@ -157,7 +157,7 @@ public class Murder : MonoBehaviour
     {
         if (other.CompareTag("Player")) {
             // Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Menu");
         }
     }
 

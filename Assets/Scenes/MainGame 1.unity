@@ -2318,6 +2318,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407941764}
   m_CullTransparentMesh: 1
+--- !u!1 &419251659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419251660}
+  - component: {fileID: 419251662}
+  - component: {fileID: 419251661}
+  m_Layer: 0
+  m_Name: SalaM-12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419251660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419251659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22.22, y: -1.98, z: -3.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1926444132}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &419251661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419251659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0289b008c4861f4e8f0264de77b080e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 12
+  playerEnter: 0
+  pointCaptured: 0
+  linus: {fileID: 398062}
+  sum: 0
+  informationText: {fileID: 627918827}
+  defaultText: "Segure o bot\xE3o esquerdo do mouse."
+--- !u!65 &419251662
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419251659}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2354126, y: 2.480957, z: 2.4168396}
+  m_Center: {x: 0.09371948, y: -0.22009277, z: -0.105903625}
 --- !u!1 &437869595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4883451456606631030, guid: 27812586ddfd60b498c3257b047ab6f8, type: 3}
@@ -5867,6 +5932,71 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3546799026164785913, guid: 27812586ddfd60b498c3257b047ab6f8, type: 3}
+--- !u!1 &1089392872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1089392873}
+  - component: {fileID: 1089392875}
+  - component: {fileID: 1089392874}
+  m_Layer: 0
+  m_Name: SalaN-13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1089392873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089392872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22.22, y: -1.98, z: -10.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1926444132}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1089392874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089392872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0289b008c4861f4e8f0264de77b080e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 13
+  playerEnter: 0
+  pointCaptured: 0
+  linus: {fileID: 398062}
+  sum: 0
+  informationText: {fileID: 627918827}
+  defaultText: "Segure o bot\xE3o esquerdo do mouse."
+--- !u!65 &1089392875
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089392872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2354126, y: 2.480957, z: 2.4168396}
+  m_Center: {x: 0.09371948, y: -0.22009277, z: -0.105903625}
 --- !u!1 &1101218064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6157235893735578157, guid: 27812586ddfd60b498c3257b047ab6f8, type: 3}
@@ -7056,6 +7186,71 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5709262284887256112, guid: 27812586ddfd60b498c3257b047ab6f8, type: 3}
+--- !u!1 &1302234472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1302234473}
+  - component: {fileID: 1302234475}
+  - component: {fileID: 1302234474}
+  m_Layer: 0
+  m_Name: SalaL-11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1302234473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302234472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.45, y: -1.87, z: -2.87}
+  m_LocalScale: {x: 1.1317, y: 1, z: 1.3438}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1926444132}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1302234474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302234472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0289b008c4861f4e8f0264de77b080e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 11
+  playerEnter: 0
+  pointCaptured: 0
+  linus: {fileID: 398062}
+  sum: 0
+  informationText: {fileID: 627918827}
+  defaultText: "Segure o bot\xE3o esquerdo do mouse."
+--- !u!65 &1302234475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302234472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2354126, y: 2.480957, z: 2.4168396}
+  m_Center: {x: 0.09371948, y: -0.22009277, z: -0.105903625}
 --- !u!1 &1303434219 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4208778275293159739, guid: 27812586ddfd60b498c3257b047ab6f8, type: 3}
@@ -9004,6 +9199,9 @@ Transform:
   - {fileID: 1655853852}
   - {fileID: 559089663}
   - {fileID: 1118586989}
+  - {fileID: 1302234473}
+  - {fileID: 419251660}
+  - {fileID: 1089392873}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

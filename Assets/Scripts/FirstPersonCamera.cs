@@ -63,7 +63,7 @@ public class FirstPersonCamera : MonoBehaviour
         }
 
     }
-    //Starta sempre com -1 (significa que é camera do player)
+    //Starta sempre com -1 (significa que ï¿½ camera do player)
     void switchCamera() {
         this.flag *= -1;
         if (flag == 1)

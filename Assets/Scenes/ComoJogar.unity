@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -195,18 +195,18 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Linus finaliza seu \xFAltimo dia de aula na disciplina de Resolu\xE7\xE3o
-    de\n problemas com grafos. Entretanto, Linus n\xE3o est\xE1 com sua sanidade\n
-    mental em dia, como nos primeiros dias do semestre e come\xE7a perder o\n senso
-    do que \xE9 real ou n\xE3o. De tanto estudar algoritmos complexos de\n grafos,
-    Linus acorda em um lugar estranho, onde \xE9 perseguido por um\n monstro que
-    at\xE9 ent\xE3o n\xE3o se sabe seu paradeiro e inten\xE7\xF5es, s\xF3 que\n Linus
-    percebe que ele utiliza o Algoritmo de Dijkstra para tentar\n peg\xE1-lo. Sabendo
-    que o algoritmo \xE9 muito eficiente, Linus entra em\n p\xE2nico, e desiste ali
-    mesmo, sente uma esp\xE9cie de culpa que at\xE9 ent\xE3o\n ningu\xE9m sabe o
-    motivo. Linus precisa investigar os lugares do mapa\n para entender o que realmente
-    est\xE1 acontecendo ali. O monstro at\xE9\n ent\xE3o sem um nome aparente, se
-    cansa ao dar as famosas \u201Ccarreiras\u201D,\n o tempo de descanso dele \xE9
-    equivalente ao peso do caminho do grafo\n que ele percorreu na \u201Ccarreira\u201D.\n"
+    de\n problemas com grafos. Entretanto, Linus n\xE3o est\xE1 com sua sanidade\nmental
+    em dia, como nos primeiros dias do semestre e come\xE7a perder o\n senso do que
+    \xE9 real ou n\xE3o. De tanto estudar algoritmos complexos de\n grafos, Linus
+    acorda em um lugar estranho, onde \xE9 perseguido por um\n monstro que at\xE9
+    ent\xE3o n\xE3o se sabe seu paradeiro e inten\xE7\xF5es, s\xF3 que\n Linus percebe
+    que ele utiliza o Algoritmo de Dijkstra para tentar\n peg\xE1-lo. Sabendo que
+    o algoritmo \xE9 muito eficiente, Linus entra em\n p\xE2nico, e desiste ali mesmo,
+    sente uma esp\xE9cie de culpa que at\xE9 ent\xE3o\n ningu\xE9m sabe o motivo.
+    Linus precisa investigar os lugares do mapa\n para entender o que realmente est\xE1
+    acontecendo ali. O monstro at\xE9\n ent\xE3o sem um nome aparente, se cansa ao
+    dar as famosas \u201Ccarreiras\u201D,\n o tempo de descanso dele \xE9 equivalente
+    ao peso do caminho do grafo\n que ele percorreu na \u201Ccarreira\u201D.\n"
 --- !u!222 &35463240
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -381,8 +381,8 @@ Camera:
   m_GameObject: {fileID: 621663790}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.036810223, g: 0.03717018, b: 0.03773582, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
