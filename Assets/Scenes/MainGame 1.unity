@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPosition: 0
+  ponto: 11
   runSong: {fileID: 398068}
 --- !u!136 &398063
 CapsuleCollider:
@@ -633,6 +634,7 @@ MonoBehaviour:
   id: 2
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -1798,6 +1800,7 @@ MonoBehaviour:
   id: 6
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -2013,6 +2016,7 @@ MonoBehaviour:
   id: 9
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -2723,6 +2727,7 @@ MonoBehaviour:
   id: 5
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -3091,6 +3096,7 @@ MonoBehaviour:
   id: 7
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -3155,6 +3161,7 @@ MonoBehaviour:
   id: 1
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -4364,6 +4371,7 @@ MonoBehaviour:
   id: 0
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -4438,6 +4446,7 @@ MonoBehaviour:
   id: 10
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -5566,6 +5575,7 @@ MonoBehaviour:
   id: 4
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -5696,6 +5706,7 @@ MonoBehaviour:
   id: 8
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."
@@ -6900,6 +6911,7 @@ MonoBehaviour:
   id: 3
   playerEnter: 0
   pointCaptured: 0
+  linus: {fileID: 398062}
   sum: 0
   informationText: {fileID: 627918827}
   defaultText: "Segure o bot\xE3o esquerdo do mouse."

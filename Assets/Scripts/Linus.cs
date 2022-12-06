@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Linus : MonoBehaviour
 {
 
+    // public GameObject[] rooms;
+
+    // [SerializeField] private RoomSetter roomsetter;
 
     public int playerPosition;
 
-
+    public int ponto = 11;
+    // public int room;
     CharacterController controller;
 
     Vector3 forward; //frente & tras
@@ -22,11 +26,22 @@ public class Linus : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();    
+        // instance = this;
     }
+
+    // public void vitoria (){
+    //     if(roomsetter.pointCaptured == true){
+    //         Debug.Log("win");
+    //     }
+    // }
 
     
     void Update()
     {
+        if(ponto <= 0){
+            SceneManager.LoadScene("GameOver");
+        }
+        // vitoria ();
         if(Input.GetKeyDown(KeyCode.P)){
             GameController.instance.ShowPause();
             Time.timeScale=0;
