@@ -12,12 +12,12 @@ public class Murder : MonoBehaviour
                             { 2,0,8,0,3,0,0,0,0,0,0 },
                             { 0,8,0,0,0,0,3,0,0,0,0 },
                             { 0,0,0,0,1,0,0,0,0,0,0 },
-                            { 0,0,0,1,0,4,0,6,0,0,0 },
+                            { 0,3,0,1,0,4,0,6,0,0,0 },
                             { 0,0,0,0,4,0,4,0,6,0,0 },
                             { 0,0,3,0,0,4,0,0,0,0,7 },
                             { 0,0,0,0,6,0,0,0,4,0,0 },
                             { 0,0,0,0,0,6,0,4,0,1,0 },
-                            { 0,0,0,0,0,6,0,0,0,1,0 },
+                            { 0,0,0,0,0,0,0,0,1,0,4 },
                             { 0,0,0,0,0,0,7,0,0,4,0 }
                             };
     private Vector3[] unityGraphPosition
@@ -50,6 +50,7 @@ public class Murder : MonoBehaviour
     //HUD
     public Text playerPositionText;
     public Text murderShortestPath;
+    public Text shortestPathText;
     private void Awake()
     {
         this.transform.position = unityGraphPosition[murderLocation];
@@ -86,6 +87,7 @@ public class Murder : MonoBehaviour
                 int destino = (int)fullpath[i + 1];
                 tempoDeRecalculo += graph[origem, destino];
             }
+            shortestPathText.text = tempoDeRecalculo.ToString();
             murderShortestPath.text = text;
             StartCoroutine(movementMurderOnebyOne(fullpath));
 
