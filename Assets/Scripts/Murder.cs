@@ -34,17 +34,17 @@ public class Murder : MonoBehaviour
             new Vector3(-195.6f,-637.58f,-71.56f), //K
         };
     private string[] frasesGame = {
-            "Porque você está desistindo de novo?", //A
-            "Quando vai perceber que você cavou a própria cova?", //B
-            "Não tem fim, e você sabia.", //C
-            "Sabemos o que você fez.", //D
+            "Porque vocï¿½ estï¿½ desistindo de novo?", //A
+            "Quando vai perceber que vocï¿½ cavou a prï¿½pria cova?", //B
+            "Nï¿½o tem fim, e vocï¿½ sabia.", //C
+            "Sabemos o que vocï¿½ fez.", //D
             "Estaremos sempre lhe observando.", //E
-            "Está satisfeito agora?", //F
-            "Você causou tudo isso.", //G
+            "Estï¿½ satisfeito agora?", //F
+            "Vocï¿½ causou tudo isso.", //G
             "Agora resolva.", //H
-            "Ele já sabe, nois sabemos.", //I
-            "Você podia ter ajudado quando podia.", //J
-            "Agora é tarde.", //K
+            "Ele jï¿½ sabe, nois sabemos.", //I
+            "Vocï¿½ podia ter ajudado quando podia.", //J
+            "Agora ï¿½ tarde.", //K
         };
     public int playerLocation;
     public GameObject player;
@@ -94,7 +94,7 @@ public class Murder : MonoBehaviour
     {
         while (!playerCaptured || murderLocation != playerLocation)
         {
-            Debug.Log("Calculando nova trajetoria!");
+            // Debug.Log("Calculando nova trajetoria!");
 
             laughSong.Play();
 
@@ -115,7 +115,7 @@ public class Murder : MonoBehaviour
 
             float tempoTotal = 25.0f + tempoDeRecalculo;
 
-            Debug.Log("Tempo para recalcular: " + tempoTotal);
+            // Debug.Log("Tempo para recalcular: " + tempoTotal);
             
             yield return new WaitForSeconds(tempoTotal);
         }
@@ -130,9 +130,9 @@ public class Murder : MonoBehaviour
             destino = (int)fullpath[i + 1];
             peso = graph[origem, destino];
 
-            Debug.Log("Estou no vertice: "+ origem);
-            Debug.Log("Indo ao vertice: " + destino);
-            Debug.Log("Com o Peso: " + peso);
+            // Debug.Log("Estou no vertice: "+ origem);
+            // Debug.Log("Indo ao vertice: " + destino);
+            // Debug.Log("Com o Peso: " + peso);
 
             pathToGo = unityGraphPosition[destino];
             murderLocation = destino;
@@ -142,7 +142,7 @@ public class Murder : MonoBehaviour
 
             this.dialogInformationText.text = frasesGame[i];
 
-            //Chegando lá, eu descanso o tanto que andei
+            //Chegando lï¿½, eu descanso o tanto que andei
             yield return new WaitForSeconds(1f + peso);
         }
         this.dialogInformationText.text = "";
@@ -150,8 +150,12 @@ public class Murder : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) {
-            Debug.Log("Teleportas");
+            // Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            SceneManager.LoadScene("GameOver");
         }
     }
+
+
+
 
 }

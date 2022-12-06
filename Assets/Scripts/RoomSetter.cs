@@ -14,7 +14,7 @@ public class RoomSetter : MonoBehaviour
 
     public Text informationText;
 
-    public string defaultText= "Segure o botão esquerdo do mouse.";
+    public string defaultText= "Segure o botï¿½o esquerdo do mouse.";
 
     private void Update()
     {
@@ -25,12 +25,12 @@ public class RoomSetter : MonoBehaviour
                 informationText.text = "Carregando... Restam "+ (3000-sum).ToString();
                 if ((sum / 3000) >= 1) {
                     pointCaptured = true;
-                    defaultText = "Ponto já analisado!";
+                    defaultText = "Ponto jï¿½ analisado!";
                     informationText.text = defaultText;
                 }
             }
             if (Input.GetKeyUp(KeyCode.Mouse0)) {
-                Debug.Log("Soltando");
+                // Debug.Log("Soltando");
             }
         }
     }

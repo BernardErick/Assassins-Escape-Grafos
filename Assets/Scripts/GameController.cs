@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
         informacao.SetActive(true);
         caminho.SetActive(true);
         Time.timeScale=1;
-        Debug.Log("despause");
+        // Debug.Log("despause");
     }
 
     public void Jogar(){
