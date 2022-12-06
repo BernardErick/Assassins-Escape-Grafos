@@ -18,7 +18,7 @@ public class Linus : MonoBehaviour
     float forwardSpeed = 1f;
     float strafeSpeed = 1f;
 
-
+    public AudioSource runSong;
     void Start()
     {
         controller = GetComponent<CharacterController>();    
@@ -31,11 +31,13 @@ public class Linus : MonoBehaviour
         {
             forwardSpeed = 2f;
             strafeSpeed = 2f;
+            runSong.Play();
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             forwardSpeed = 1f;
             strafeSpeed = 1f;
+            runSong.Stop();
         }
         float fowardInput = Input.GetAxisRaw("Vertical");
         float strafeInput = Input.GetAxisRaw("Horizontal");
@@ -47,7 +49,6 @@ public class Linus : MonoBehaviour
         Vector3 finalVelocity = forward + strafe + vertical;
 
         controller.Move(finalVelocity * Time.deltaTime);
-        
 
     }
 

@@ -33,7 +33,19 @@ public class Murder : MonoBehaviour
             new Vector3(-187.58f,-637.58f,-71.56f), //J
             new Vector3(-195.6f,-637.58f,-71.56f), //K
         };
-
+    private string[] frasesGame = {
+            "Porque você está desistindo de novo?", //A
+            "Quando vai perceber que você cavou a própria cova?", //B
+            "Não tem fim, e você sabia.", //C
+            "Sabemos o que você fez.", //D
+            "Estaremos sempre lhe observando.", //E
+            "Está satisfeito agora?", //F
+            "Você causou tudo isso.", //G
+            "Agora resolva.", //H
+            "Ele já sabe, nois sabemos.", //I
+            "Você podia ter ajudado quando podia.", //J
+            "Agora é tarde.", //K
+        };
     public int playerLocation;
     public GameObject player;
     public int murderLocation;
@@ -51,6 +63,14 @@ public class Murder : MonoBehaviour
     public Text playerPositionText;
     public Text murderShortestPath;
     public Text shortestPathText;
+
+    //Audio
+    public AudioSource laughSong;
+    public AudioSource cansadoSong;
+
+    //Dialog
+    public Text dialogInformationText;
+    
     private void Awake()
     {
         this.transform.position = unityGraphPosition[murderLocation];
@@ -76,6 +96,8 @@ public class Murder : MonoBehaviour
         {
             Debug.Log("Calculando nova trajetoria!");
 
+            laughSong.Play();
+
             ArrayList fullpath = ShortestPath.Dijkstra(graph, murderLocation, playerLocation);
             string text = "";
             foreach (int path in fullpath)
@@ -91,9 +113,10 @@ public class Murder : MonoBehaviour
             murderShortestPath.text = text;
             StartCoroutine(movementMurderOnebyOne(fullpath));
 
-            float tempoTotal = 30.0f + tempoDeRecalculo;
+            float tempoTotal = 25.0f + tempoDeRecalculo;
 
             Debug.Log("Tempo para recalcular: " + tempoTotal);
+            
             yield return new WaitForSeconds(tempoTotal);
         }
     }
@@ -113,15 +136,22 @@ public class Murder : MonoBehaviour
 
             pathToGo = unityGraphPosition[destino];
             murderLocation = destino;
+
+            cansadoSong.pitch -= peso * 0.01f;
+            cansadoSong.Play();
+
+            this.dialogInformationText.text = frasesGame[i];
+
             //Chegando lá, eu descanso o tanto que andei
             yield return new WaitForSeconds(1f + peso);
         }
+        this.dialogInformationText.text = "";
     }
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.CompareTag("Player")) {
+        if (other.CompareTag("Player")) {
             Debug.Log("Teleportas");
-            //SceneManager.LoadScene("GameOver");
         }
     }
+
 }
