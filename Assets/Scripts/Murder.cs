@@ -6,11 +6,8 @@ using UnityEngine;
 public class Murder : MonoBehaviour
 {
     private int[,] graph
-<<<<<<< HEAD
            = new int[,] {
-=======
             = new int[,] {
->>>>>>> 7e682520b3b3c1ae560250a14605e43596f28aec
                             { 0,2,0,0,0,0,0,0,0,0,0,0,0,0 },//A
                             { 2,0,8,0,3,0,0,0,0,0,0,0,0,0 },//B
                             { 0,8,0,0,0,0,3,0,0,0,0,0,0,0 },//C
@@ -26,13 +23,7 @@ public class Murder : MonoBehaviour
                             { 0,0,0,0,0,0,0,0,0,0,0,5,0,4 },//M
                             { 0,0,0,0,0,0,5,0,0,0,0,0,4,0 },//N
                         };
-<<<<<<< HEAD
-                       };
-    private Vector3[] unityGraphPosition
-=======
-                        };
     private Vector3[] unityGraphPosition 
->>>>>>> 7e682520b3b3c1ae560250a14605e43596f28aec
         = { new Vector3(-175.525f,-637.58f,-91.562f), //A
             new Vector3(-179.74f,-637.58f,-91.562f), //B
             new Vector3(-195.61f,-637.58f,-91.562f), //C
