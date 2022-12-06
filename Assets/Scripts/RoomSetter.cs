@@ -10,11 +10,20 @@ public class RoomSetter : MonoBehaviour
 
     public bool pointCaptured;
 
+    [SerializeField] private Linus linus;
+
+    public static RoomSetter instance;
+
     public int sum;
 
     public Text informationText;
 
     public string defaultText= "Segure o bot�o esquerdo do mouse.";
+
+    void Start(){
+        instance = this;
+    }
+
 
     private void Update()
     {
@@ -22,9 +31,10 @@ public class RoomSetter : MonoBehaviour
             if (Input.GetKey(KeyCode.Mouse0) && !pointCaptured)
             {
                 sum++;
-                informationText.text = "Carregando... Restam "+ (3000-sum).ToString();
-                if ((sum / 3000) >= 1) {
+                informationText.text = "Carregando... Restam "+ (30-sum).ToString();
+                if ((sum / 30) >= 1) {
                     pointCaptured = true;
+                    linus.ponto --;
                     defaultText = "Ponto j� analisado!";
                     informationText.text = defaultText;
                 }
