@@ -78,43 +78,62 @@ public class Murder : MonoBehaviour
             string text = "";
             foreach (int path in fullpath)
                 text += "->" + path;
+
+            float tempoDeRecalculo = 0;
+            for (int i = 0; i < fullpath.Count - 1;i++) {
+                int origem = (int)fullpath[i];
+                int destino = (int)fullpath[i + 1];
+                tempoDeRecalculo += graph[origem, destino];
+            }
             murderShortestPath.text = text;
             StartCoroutine(movementMurderOnebyOne(fullpath));
-            yield return new WaitForSeconds(60.0f);
+
+            float tempoTotal = 30.0f + tempoDeRecalculo;
+
+            Debug.Log("Tempo para recalcular: " + tempoTotal);
+            yield return new WaitForSeconds(tempoTotal);
         }
     }
     IEnumerator movementMurderOnebyOne(ArrayList fullpath){
-        foreach (int path in fullpath)
+        fullpath.RemoveAt(0);
+        int origem = -1;
+        int destino = -1;
+        float peso = 1f;
+        for (int i = 0; i < fullpath.Count - 1; i++)
         {
-            Debug.Log("Estou no vertice: " + path);
-            float peso = 0.01f;
+            origem = (int)fullpath[i];
+            destino = (int)fullpath[i + 1];
+            peso = graph[origem, destino];
 
-            /*
-             * Consertar o trecho de código abaixo
-             */
-            if(graph.GetLength(0) > path + 1)
-                peso = (graph[path, path + 1] / 100f);
-            /*
-            * Fazer o devido tratamento para ele não causar o IndexOfBounts (O If É SÓ UM TRATAMENTO PROVISORIO)
-            */
-            Debug.Log(peso);
+            Debug.Log("Estou no vertice: "+ origem);
+            Debug.Log("Indo ao vertice: " + destino);
+            Debug.Log("Com o Peso: " + peso);
 
-            pathToGo = unityGraphPosition[path];
-            murderLocation = path;
-            float tempo = (peso * 100f);
+            pathToGo = unityGraphPosition[origem];
+            murderLocation = origem;
 
-            Debug.Log(tempo);
-            /*
-             *  Verifiquem se o tempo não está muito demorado, se estiver lento, tentem pegar 1/3 do tempo extra ou 1/2
-             */
-            yield return new WaitForSeconds(1f + tempo);
+            yield return new WaitForSeconds(1f + peso);
         }
+        if (playerLocation != murderLocation) {
+            try {
+                //Precisa ser revisada essa parte
+                pathToGo = unityGraphPosition[destino];
+                murderLocation = destino;
+            }
+            catch (Exception e) {
+                Debug.LogError("movementMurderOnebyOne setPathToGo&murderLocation error: "+e.Message);
+            }
+
+        }
+
+
+        yield return new WaitForSeconds(1f + peso);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player")) {
             Debug.Log("Teleportas");
-            SceneManager.LoadScene("GameOver");
+            //SceneManager.LoadScene("GameOver");
         }
     }
 }

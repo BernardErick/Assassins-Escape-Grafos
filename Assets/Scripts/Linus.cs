@@ -8,6 +8,7 @@ public class Linus : MonoBehaviour
 
     public int playerPosition;
 
+
     CharacterController controller;
 
     Vector3 forward; //frente & tras
@@ -17,6 +18,7 @@ public class Linus : MonoBehaviour
     float forwardSpeed = 1f;
     float strafeSpeed = 1f;
 
+
     void Start()
     {
         controller = GetComponent<CharacterController>();    
@@ -25,6 +27,16 @@ public class Linus : MonoBehaviour
     
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            forwardSpeed = 2f;
+            strafeSpeed = 2f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            forwardSpeed = 1f;
+            strafeSpeed = 1f;
+        }
         float fowardInput = Input.GetAxisRaw("Vertical");
         float strafeInput = Input.GetAxisRaw("Horizontal");
 
@@ -36,6 +48,7 @@ public class Linus : MonoBehaviour
 
         controller.Move(finalVelocity * Time.deltaTime);
         
+
     }
 
 }
